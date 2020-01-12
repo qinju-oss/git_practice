@@ -14,4 +14,11 @@ public class TestController {
     public String getHello(){
         return "hello";
     }
+
+    @GetMapping("/test")
+    public String getWords(){
+        return "文档测试";
+    }
+
+
 }

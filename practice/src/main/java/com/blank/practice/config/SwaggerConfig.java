@@ -12,7 +12,7 @@ import springfox.documentation.spring.web.plugins.Docket;
 import springfox.documentation.swagger2.annotations.EnableSwagger2;
 
 /**
- * @author 秦菊
+ * @author XXX
  * @version 1.0
  * @date 2020/1/10 15:48
  */
@@ -27,7 +27,7 @@ public class SwaggerConfig {
                 .apiInfo(apiInfo())
                 .host("localhost:8080")
                 .select()
-                .apis(RequestHandlerSelectors.basePackage("com.blank.practice"))
+                .apis(RequestHandlerSelectors.basePackage("com.blank.practice.controller"))
                 .paths(PathSelectors.any())
                 .build();
     }
