@@ -51,11 +51,10 @@
 
         <!-- https://mvnrepository.com/artifact/org.mybatis/mybatis -->
         <dependency>
-            <groupId>org.mybatis</groupId>
-            <artifactId>mybatis</artifactId>
-            <version>3.5.3</version>
+            <groupId>com.baomidou</groupId>
+            <artifactId>mybatis-plus-boot-starter</artifactId>
+            <version>3.3.0</version>
         </dependency>
-
         <!--添加lombok依赖-->
         <dependency>
             <groupId>org.projectlombok</groupId>
