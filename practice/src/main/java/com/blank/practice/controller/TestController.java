@@ -1,7 +1,12 @@
 package com.blank.practice.controller;
 
+import com.blank.practice.entity.People;
+import com.blank.practice.service.PeopleService;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RestController;
+
+import java.util.List;
 
 /**
  * @author 秦菊
@@ -10,14 +15,11 @@ import org.springframework.web.bind.annotation.RestController;
  */
 @RestController
 public class TestController {
-    @GetMapping("/hello")
-    public String getHello(){
-        return "hello";
-    }
-
-    @GetMapping("/test")
-    public String getWords(){
-        return "文档测试";
+    @Autowired
+    private PeopleService peopleService;
+    @GetMapping("/")
+    public List<People> selectPeopleInfo(){
+        return peopleService.selectAll();
     }
 
 
