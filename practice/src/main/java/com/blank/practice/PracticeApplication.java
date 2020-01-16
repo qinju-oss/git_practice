@@ -6,7 +6,7 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.stereotype.Repository;
 
 @SpringBootApplication
-@MapperScan(value = "com.blank.practice.mapper")
+@MapperScan(value = "com.blank.practice.dao")
 public class PracticeApplication {
 
     public static void main(String[] args) {

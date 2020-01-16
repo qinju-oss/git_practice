@@ -1,7 +1,7 @@
 package com.blank.practice.service.impl;
 
+import com.blank.practice.dao.PeopleMapper;
 import com.blank.practice.entity.People;
-import com.blank.practice.mapper.PeopleMapper;
 import com.blank.practice.service.PeopleService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
