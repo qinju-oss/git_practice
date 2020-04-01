@@ -5,6 +5,7 @@ import com.blank.practice.entity.People;
 import com.blank.practice.service.PeopleService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
+import org.springframework.transaction.annotation.Transactional;
 
 import java.util.List;
 
@@ -20,6 +21,18 @@ public class PeopleServiceImpl implements PeopleService {
 
     @Override
     public List<People> selectAll() {
+
         return peopleMapper.selectAll();
+
+    }
+
+    @Override
+    @Transactional(rollbackFor = Exception.class)
+    public Boolean addPeople(People people) {
+        int flag = peopleMapper.insert(people);
+        if ("秦菊".equals(people.getName())) {
+            throw new RuntimeException("不能添加此用户");
+        }
+        return flag>0;
     }
 }

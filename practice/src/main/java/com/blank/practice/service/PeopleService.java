@@ -11,4 +11,6 @@ import java.util.List;
 
 public interface PeopleService {
     List<People> selectAll();
+
+    Boolean addPeople(People people);
 }
